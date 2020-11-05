@@ -7,7 +7,7 @@ module.exports = app => {
 
     app.post('/atendimento', (req, res) => {
         const atendimento = req.body;
-        Atendimento.adiciona(atendimento);
+        Atendimento.adiciona(atendimento, res);
         
 
     });
