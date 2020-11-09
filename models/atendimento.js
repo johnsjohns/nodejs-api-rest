@@ -5,8 +5,8 @@ class Atendimento{
     adiciona(atendimento, res){
         const dataCriacao = moment().format('YYYY-MM-DD HH:mm:ss');
         const data = moment(atendimento.data, 'DD/MM/YYYY').format('YYYY-MM-DD HH:mm:ss');
-
-        const dataEhValida = false /*moment(data).isSameOrAfter(dataCriacao);*/
+        console.log(data + " " + dataCriacao);
+        const dataEhValida = data < dataCriacao /*moment(data).isSameOrAfter(dataCriacao);*/
         const clienteEhValido = atendimento.cliente.length <= 5;
 
         const validacoes = [
